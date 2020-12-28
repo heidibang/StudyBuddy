@@ -251,23 +251,30 @@ li.navbar_item {
     align-items: center;
 }
 
+.userProfile {
+  display: grid;
+  grid-template-areas:
+    'profilePic   schools'
+    'displayName  classes' 
+    'location     events'
+    'contact      events';
+  margin-left: 30px;
+
+}
+
 .profilePic {
     grid-area: profilePic;
     border-radius: 50%;
     width: 170px;
     height: auto;
-
+    padding-top: 5em;
 }
 
 .displayName {
     grid-area: displayName;
-    padding-top: 1em;
+    padding-top: 2em;
     font-weight: bolder;
     font-size: x-large;
-    padding-top: 10px;
-    font-weight: bold;
-    font-size: xx-large;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .contact {

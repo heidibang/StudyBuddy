@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { AppContext } from "./ContextProvider";
 import axios from "axios";
+import { reset } from "nodemon";
 
 function Login(props) {
   const { user, setCurrentUser } = useContext(AppContext);
@@ -15,10 +16,12 @@ function Login(props) {
     ).then((res) => {
       
       if (res.data.length > 0) {
-        setCurrentUser(res.data[0]);
+        console.log(res.data[0]);
+        setCurrentUser(res.data[0])
         props.history.push('/homepage')
       } else {
-        alert("Wrong username or password entered");
+        alert("Wrong username or password entered")
+        // reset();
       }
     });
   };

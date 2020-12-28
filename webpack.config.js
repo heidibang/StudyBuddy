@@ -35,7 +35,10 @@ module.exports = {
       ]
   },
   resolve : {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
+    fallback: {
+      util: require.resolve("util/")
+    }
   },
   devServer: {
     publicPath: '/build/',
