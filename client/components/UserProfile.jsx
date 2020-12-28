@@ -20,7 +20,7 @@ import React, {useState} from 'react';
 //   );
 // }
 
-function Userpage() {
+function UserProfile() {
 
   //grab fname, lname
   const [name,updateName] = useState('John Smith');
@@ -31,21 +31,20 @@ function Userpage() {
   return(
     <div className="userProfile">
       <img className="profilePic" src="/john-smith.jpg"></img>
-      <pre>
       <div className="displayName">{name}</div>
-      <div className="location">Location       {location}</div>
-      <div className="contact">Contact         {contact}</div>
-      <div className="bio">About Me      I enjoy hiking, reading, and watching TV.</div>
-      </pre>
-
+      <div className="location">{location}</div>
+      <div className="contact">{contact}</div>
+      <div className="userSchools">{schools}</div>
+      <div className="userClasses">{classes}</div>
+      <div className="userEvents">{events}</div>
 
       {/* set edit button here? */}
 
-      
+
     </div>
 
   )
 
 }
 
-export default Userpage;
+export default UserProfile;

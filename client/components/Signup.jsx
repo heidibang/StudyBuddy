@@ -8,14 +8,10 @@ function Signup() {
     console.log(values)
     axios({
       method: 'POST',
-      url: 'http://localhost:3000/api/users',
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Content-Type': 'application/json',
-      },
-      body: { values }
+      url: 'http://localhost:3000/api/users', values
     })
-    .then(res => console.log(res))
+    .then(res => res.json())
+    .then(resJson => console.log(resJson))
   };
 
   const { register, handleSubmit } = useForm();

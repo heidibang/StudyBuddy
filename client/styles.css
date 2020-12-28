@@ -229,47 +229,6 @@ li.navbar_item {
   /* font-size: 30px; */
 }
 
-.userProfile {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;   
-}
-
-.profilePic {
-    border-radius: 0.625rem;
-    height: 200px;
-    width: 200px;
-}
-
-.displayName {
-    padding-top: 10px;
-    font-weight: bold;
-    font-size: xx-large; 
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.contact {
-    padding-top: 10px;
-    font-weight: bold;
-    font-size: large;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.location {
-    padding-top: 10px;
-    font-weight: bold;
-    font-size: large;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.bio {
-    padding-top: 10px;
-    font-weight: bold;
-    font-size: large;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 .eventList {
     display: flex;
 }
@@ -278,4 +237,52 @@ li.navbar_item {
     display: flex;
     flex-direction: row;
     font-size: 14px;
+}
+
+.userProfile {
+    display: grid;
+    grid-template-areas:
+        'profilePic   schools'
+        'displayName  classes' 
+        'location     events'
+        'contact      events';
+    margin-left: 30px;
+ 
+}
+
+.profilePic {
+    grid-area: profilePic;
+    border-radius: 50%;
+    width: 170px;
+    height: auto;
+
+}
+
+.displayName {
+    grid-area: displayName;
+    padding-top: 1em;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+.contact {
+    grid-area: contact;
+    padding-top: 1em;
+}
+
+.location {
+    grid-area: location;
+    padding-top: 1em;
+}
+
+.userSchools {
+    grid-area: schools;
+}
+
+.userClasses {
+    grid-area: classes;
+}
+
+.userEvents {
+    grid-area: events;
 }

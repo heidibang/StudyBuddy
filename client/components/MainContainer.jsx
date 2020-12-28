@@ -1,7 +1,7 @@
 import React, { Component, useState } from "react";
 import { Switch, Route, useRouteMatch } from "react-router-dom";
 import UserProfile from "./UserProfile.jsx";
-import UpdateUser from "./UpdateUser.jsx";
+// import UpdateUser from "./UpdateUser.jsx";
 import CreateEvent from "./CreateEvent.jsx";
 import EventLanding from "./EventLanding.jsx";
 import EventProfile from "./EventProfile.jsx";
@@ -15,7 +15,7 @@ export default function Homepage() {
       <EventLanding />
       <Switch>
         <Route path={`${match.path}/userpage`}>
-          <UpdateUser />
+          <UserProfile />
         </Route>
         <Route path={`${match.path}/event`}>
           <EventProfile />
