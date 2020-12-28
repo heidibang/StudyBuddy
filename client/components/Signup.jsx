@@ -7,8 +7,9 @@ function Signup() {
   const onSubmit = (values) => {
     console.log(values)
     axios({
-      method: 'POST',
-      url: 'http://localhost:3000/api/users', values
+      method: 'post',
+      url: 'http://localhost:3000/api/users', 
+      values
     })
     .then(res => res.json())
     .then(resJson => console.log(resJson))
