@@ -19,12 +19,12 @@ function Signup() {
     axios.post('http://localhost:3000/api/users', data)
     .then(res => {
       console.log(res)
-      if (res.status === 200) {
-        alert("Account successfully created. Return to Login")
-        props.history.push('/')
-      } else {
-        alert("Error creating account");
-      }
+      // if (res.status === 200) {
+      //   alert("Account successfully created. Return to Login")
+      //   props.history.push('/')
+      // } else {
+      //   alert("Error creating account");
+      // }
     })
   };
 
